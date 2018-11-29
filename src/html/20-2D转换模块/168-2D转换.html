@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D转换</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        ul {
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        ul li {
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        ul li:nth-child(2) {
+            /* deg是单位 */
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        ul li:nth-child(3) {
+            -webkit-transform: translate(100px, 0px);
+            -moz-transform: translate(100px, 0px);
+            -ms-transform: translate(100px, 0px);
+            -o-transform: translate(100px, 0px);
+            transform: translate(100px, 0px);
+        }
+        ul li:nth-child(4) {
+            -webkit-transform: scale(1.2, 1.5);
+            -moz-transform: scale(1.2, 1.5);
+            -ms-transform: scale(1.2, 1.5);
+            -o-transform: scale(1.2, 1.5);
+            transform: scale(1.2, 1.5);
+        }
+        /* 综合时，顺序会影响效果 */
+        /* 2D转换会修改元素的坐标系 ， 先转再移 和 先移再转 效果会不同 */
+        ul li:nth-child(5) {
+            /*-webkit-transform: rotate(45deg) translate(100px, 0px);*/
+            /*-moz-transform: rotate(45deg) translate(100px, 0px);*/
+            /*-ms-transform: rotate(45deg) translate(100px, 0px);*/
+            /*-o-transform: rotate(45deg) translate(100px, 0px);*/
+            /*transform: rotate(45deg) translate(100px, 0px);*/
+            -webkit-transform: translate(100px, 0px) rotate(45deg);
+            -moz-transform: translate(100px, 0px) rotate(45deg);
+            -ms-transform: translate(100px, 0px) rotate(45deg);
+            -o-transform: translate(100px, 0px) rotate(45deg);
+            transform: translate(100px, 0px) rotate(45deg);
+        }
+
+        ol {
+            width: 150px;
+            height: 150px;
+            border: black 1px solid;
+            position: relative;
+            margin: 40px auto 0;
+            /* 透视
+               效果：近大远小
+               注意：必须添加到目标元素的父元素属性里
+             */
+            perspective: 100px;
+        }
+        ol li {
+            list-style: none;
+            width: 150px;
+            height: 150px;
+            /* 2D转换 形变中心点
+               三种取值形式：具体像素，百分比，特殊关键字
+            */
+            /*transform-origin: 150px 0px;*/
+            /*transform-origin: 15% 0;*/
+            transform-origin: left center;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+
+        }
+        ol li:nth-child(1) {
+            background-color: red;
+            transform: rotate(30deg);
+        }
+        ol li:nth-child(2) {
+            background-color: green;
+            transform: rotate(50deg);
+        }
+        ol li:nth-child(3) {
+            background-color: blue;
+            transform: rotate(70deg);
+        }
+        ol li:nth-child(4) {
+            background-color: lightskyblue;
+            transform: rotateX(50deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>正常</li>
+    <li>旋转</li>
+    <li>平移</li>
+    <li>缩放</li>
+    <li>综合</li>
+</ul>
+
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+</body>
+</html>

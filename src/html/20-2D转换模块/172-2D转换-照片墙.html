@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        ul {
+            height: 400px;
+            background-color: skyblue;
+            margin: 100px auto 0px;
+            border: black solid 1px;
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            width: 130px;
+            height: 200px;
+            overflow: hidden;
+            margin: 50px auto 0px;
+            transition: transform 1s;
+            position: relative;
+            box-shadow: 2px 2px 8px gray;
+        }
+        ul li:nth-child(1) {
+            transform: rotate(30deg);
+        }
+        ul li:nth-child(2) {
+            transform: rotate(-30deg);
+        }
+        ul li:nth-child(3) {
+            transform: rotate(15deg);
+        }
+        ul li:nth-child(4) {
+            transform: rotate(60deg);
+        }
+
+        ul li:hover {
+            transform: rotate(0deg) scale(1.3);
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="../../img/ad1.jpg" alt=""></li>
+    <li><img src="../../img/ad2.jpg" alt=""></li>
+    <li><img src="../../img/ad3.jpg" alt=""></li>
+    <li><img src="../../img/ad4.jpg" alt=""></li>
+</ul>
+</body>
+</html>
