@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位流</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: green;
+            position: relative; /* 配合 top bottom left right 一起使用 */
+            bottom: 10px;
+            top: 10px;
+            right: 9px;
+            left: 19px;
+        }
+        .box3 {
+            background-color: blue;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+        }
+        img {
+            position: relative;
+            top: 20px; /* 通过相对定位，微调，使顶部与input对齐 */
+        }
+    </style>
+</head>
+<body>
+<!--
+1.定位流分类：
+ 1).相对定位
+ 2).绝对定位
+ 3).固定定位
+ 4).静态定位
+
+2.什么是相对定位
+  相对于自己以前在标准流中的位置来移动
+
+3.相对定位注意点
+ 1）相对定位是不脱离标准流的，会继续在标准流中占位
+ 2）同一个方向上的定位属性只能使用一个
+ 3）相对定位中 区分 块级元素，行内元素，行内块级元素
+ 4）当给相对定位的元素设置margin/padding等属性时，会影响标准流中的布局
+
+4.应用场景
+ 1）用于对元素进行微调
+ 2）配合 绝对定位 使用
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+<input type="text" />
+<img src="../img/vcode.jpeg" />
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /* 告诉系统哪个属性需要过渡 */
+            -webkit-transition-property: width, background-color;
+            -moz-transition-property: width, background-color;
+            -ms-transition-property: width, background-color;
+            -o-transition-property: width, background-color;
+            transition-property: width, background-color;
+
+            /* 告诉系统过渡时长 */
+            -webkit-transition-duration: 1s, 1s;
+            -moz-transition-duration: 1s, 1s;
+            -ms-transition-duration: 1s, 1s;
+            -o-transition-duration: 1s, 1s;
+            transition-duration: 1s, 1s;
+
+            /* 告诉系统延迟几秒开始过渡 */
+            transition-delay: 1s;
+        }
+        div:hover {
+            width: 300px;
+            background-color: skyblue;
+        }
+
+        ul {
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        ul li {
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            margin-top: 50px;
+            background-color: skyblue;
+            transition-property: margin-left;
+            -webkit-transition-duration: 5s;
+            -moz-transition-duration: 5s;
+            -ms-transition-duration: 5s;
+            -o-transition-duration: 5s;
+            transition-duration: 5s;
+        }
+        ul:hover li {
+            margin-left: 700px;
+        }
+        ul li:nth-child(1) {
+            /* 过渡动画的速度变化 */
+            -webkit-transition-timing-function: linear;
+            -moz-transition-timing-function: linear;
+            -ms-transition-timing-function: linear;
+            -o-transition-timing-function: linear;
+            transition-timing-function: linear;
+        }
+        ul li:nth-child(2) {
+            -webkit-transition-timing-function: ease;
+            -moz-transition-timing-function: ease;
+            -ms-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+        }
+        ul li:nth-child(3) {
+            -webkit-transition-timing-function: ease-in;
+            -moz-transition-timing-function: ease-in;
+            -ms-transition-timing-function: ease-in;
+            -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+        }
+        ul li:nth-child(4) {
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+        ul li:nth-child(5) {
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<!--
+过渡三要素
+1。必须要有属性发生变化
+2。必须指定一个属性
+3。必须指定一个过渡时间
+
+注意点
+1。多个属性需要过渡时，用逗号分隔
+-->
+<div></div>
+
+<ul>
+    <li>linear</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+</ul>
+</body>
+</html>

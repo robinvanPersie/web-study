@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" >
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box3 {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.什么是绝对定位
+  相对与body进行定位
+
+
+2.绝对定位注意点
+  1）绝对定位脱离标准流
+  2）绝对定位的元素不区分 块级元素，行内元素，行内块级元素
+  3）如果以body为参考点，是以网页首屏的宽，高作为参考点，而不是以整个网页内容的宽，高。
+  4）绝对定位的元素，会忽略祖先元素的padding
+
+3.规律
+  1）默认情况，所有绝对定位的元素，无论有没有祖先元素，都会以body作为参考点
+     1。如果绝对定位元素有祖先元素，祖先元素也是定位流，那么这个元素就会以定位流的祖先元素作为参考点 （除开静态定位）
+     2。第1条说的定位流 不包括 静态定位
+  2）如果绝对定位元素有祖先元素，祖先元素也是定位流，并且祖先元素中有多个定位流元素，那么以离它最近的定位流祖先元素为参考点
+-->
+<div class="box1">
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

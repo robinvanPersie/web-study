@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        /*div {*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: red;*/
+            /*overflow: hidden;*/
+        /*}*/
+
+        .box1 {
+            background-color: gray;
+            overflow: hidden;
+        }
+        .box2 {
+            background-color: skyblue;
+
+        }
+        .box1 p {
+            width: 100px;
+            background-color: greenyellow;
+            float: left;
+        }
+        .box2 p {
+            width: 100px;
+            background-color: pink;
+            float: left;
+
+        }
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            overflow: hidden;
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.overflow: hidden
+   1。可以将超出标签范围的内容裁剪掉
+   2。清除浮动
+   3。不被子元素的margin-top顶下去
+-->
+<!--<div>-->
+    <!--我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字-->
+<!--</div>-->
+
+<!--<div class="box1">-->
+    <!--<p>text1</p>-->
+    <!--<p>text1</p>-->
+    <!--<p>text1</p>-->
+<!--</div>-->
+
+<!--<div class="box2">-->
+    <!--<p>text2</p>-->
+    <!--<p>text2</p>-->
+    <!--<p>text2</p>-->
+<!--</div>-->
+<div class="box3" >
+    <div class="box4" ></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位练习-团购item</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: #ccc 2px solid;
+            margin: 40px auto 0;
+            position: relative;
+            /*left: 0;*/
+            /*top: 0;*/
+
+        }
+        .cover {
+            width: 300px;
+            height: 200px;
+        }
+        .hot {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .price {
+            width: 100px;
+            height: 30px;
+            background-color: orange;
+            border-radius: 0 8px 8px 0;
+            position: absolute;
+            top: 175px;
+            left: -5px;
+            box-shadow: 3px 3px 10px #999999;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <img class="cover" src="../img/cover.jpg" >
+    <img class="hot" src="../img/hot.png" >
+    <p class="price">一百块</p>
+    <p style="margin-top: 5px;">【通用】旅游首选, 不包食宿，没有wifi，全部自费，爱去不去</p>
+</div>
+
+</body>
+</html>

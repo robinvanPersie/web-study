@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子绝父相</title>
+    <style>
+        ul {
+            list-style: none;
+            width: 800px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: gray;
+        }
+
+        li {
+            float: left;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        ul li:nth-of-type(4) {
+            background-color: yellow;
+            position: relative;
+        }
+
+        ul li img {
+            /* 相对定位弊端： 不会脱离标准流，会继续占用标准流的空间，不利于布局界面 */
+            /* 绝对定位弊端：默认情况下会以body作为参考，会随着浏览器宽，高的变化而变化 */
+
+            /* 常用：子绝父相,  但是此时如果改变父容器的宽，img 的位置就不是居中的了
+               如何水平居中： left：50% margin-left：图片宽度的一半 乘 -1 */
+            position: absolute;
+            left: 50%;
+            margin-left: -17px;
+            top: -15px;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>服装城</li>
+    <li>美妆馆</li>
+    <li>京东超市</li>
+    <li>全球购
+        <img src="../img/hot.png" width="35px" height="40px">
+    </li>
+    <li>闪购</li>
+    <li>团购</li>
+    <li>拍卖</li>
+    <li>金融</li>
+</ul>
+</body>
+</html>

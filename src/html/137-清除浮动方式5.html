@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        .box1 {
+            background-color: gray;
+        }
+        .box2 {
+            background-color: skyblue;
+
+        }
+        .box1 p {
+            width: 100px;
+            background-color: greenyellow;
+            float: left;
+        }
+        .box2 p {
+            width: 100px;
+            background-color: pink;
+            float: left;
+
+        }
+        .box1::after {
+            content: '';
+            display: block;
+            height: 0px;
+            visibility: hidden;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--
+通过伪元素选择器添加，类似内墙法，但没有增加额外div标签
+-->
+<div class="box1">
+    <p>text1</p>
+    <p>text1</p>
+    <p>text1</p>
+</div>
+
+<div class="box2">
+    <p>text2</p>
+    <p>text2</p>
+    <p>text2</p>
+</div>
+</body>
+</html>

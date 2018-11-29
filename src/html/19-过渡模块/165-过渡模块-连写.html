@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡连写</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            -webkit-transition: width 2s linear 0s;
+            -moz-transition: width 2s linear 0s;
+            -ms-transition: width 2s linear 0s;
+            -o-transition: width 2s linear 0s;
+            transition: width 2s linear 0s;
+        }
+
+        div:hover {
+            width: 300px;
+        }
+
+        /* transition连写 transition: 属性 时长 速度 延迟*/
+        /* 多个过渡逗号隔开  transition: 属性 时长 速度 延迟, 属性2 时长2 速度2 延迟2 */
+        /* 指定三要素就可以， transition：属性 时长 */
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
