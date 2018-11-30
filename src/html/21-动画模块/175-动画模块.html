@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightskyblue;
+
+            /* 1.告诉系统你要执行哪个动画 */
+            -webkit-animation-name: atmg;
+            -moz-animation-name: atmg;
+            -o-animation-name: atmg;
+            animation-name: atmg;
+
+            /* 3.告诉系统动画持续时长 */
+            -webkit-animation-duration: 3s;
+            -moz-animation-duration: 3s;
+            -o-animation-duration: 3s;
+            animation-duration: 3s;
+        }
+        /* 2.告诉系统我们需要自己创建一个名称叫做atmg的动画 */
+        @keyframes atmg {
+            from {
+                margin-left: 0px;
+            }
+            to {
+                margin-left: 500px;
+            }
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            -webkit-animation-name: sport;
+            -moz-animation-name: sport;
+            -o-animation-name: sport;
+            animation-name: sport;
+            -webkit-animation-duration: 2s;
+            -moz-animation-duration: 2s;
+            -o-animation-duration: 2s;
+            animation-duration: 2s;
+            
+            /* 延迟执行 */
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -o-animation-delay: 1s;
+            animation-delay: 1s;
+
+            /* 执行速度 */
+            -webkit-animation-timing-function: linear;
+            -moz-animation-timing-function: linear;
+            -o-animation-timing-function: linear;
+            animation-timing-function: linear;
+
+            /* 执行次数 */
+            animation-iteration-count: infinite;
+            /* alternate：往返动画, reverse 反向执行 */
+            animation-direction: alternate;
+            /* 动画当前的状态 */
+            animation-play-state: running;
+        }
+        @keyframes sport {
+            form {
+                margin-left: 0;
+            }
+
+            to {
+                margin-left: 500px;
+            }
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            animation-name: round;
+            animation-duration: 3s;
+            position: absolute;
+            left: 0px;
+            top: 200px;
+        }
+
+        @keyframes round {
+            0% {
+                left: 0px;
+                top: 200px;
+            }
+            25% {
+                left: 400px;
+                top: 200px;
+            }
+            50% {
+                left: 400px;
+                top: 500px;
+            }
+            75% {
+                left: 0px;
+                top: 500px;
+            }
+            100% {
+                left: 0px;
+                top: 200px;
+            }
+
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            margin-top: 100px;
+            -webkit-animation-name: rotate;
+            -moz-animation-name: rotate;
+            -o-animation-name: rotate;
+            animation-name: rotate;
+            -webkit-animation-duration: 3s;
+            -moz-animation-duration: 3s;
+            -o-animation-duration: 3s;
+            animation-duration: 3s;
+            /* 动画之外的状态
+               1。none  无
+               2。backwards：让元素等待状态时显示动画的第一帧
+               3。forwards： 让元素结束状态时停留在最后一帧
+               4。both： 同时设置backwards和forwards
+            */
+            -webkit-animation-fill-mode: none;
+            -moz-animation-fill-mode: none;
+            -o-animation-fill-mode: none;
+            animation-fill-mode: none;
+        }
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(10deg);
+                -moz-transform: rotate(10deg);
+                -ms-transform: rotate(10deg);
+                -o-transform: rotate(10deg);
+                transform: rotate(10deg);
+            }
+            50% {
+                -webkit-transform: rotate(50deg);
+                -moz-transform: rotate(50deg);
+                -ms-transform: rotate(50deg);
+                -o-transform: rotate(50deg);
+                transform: rotate(50deg);
+            }
+            100% {
+                -webkit-transform: rotate(70deg);
+                -moz-transform: rotate(70deg);
+                -ms-transform: rotate(70deg);
+                -o-transform: rotate(70deg);
+                transform: rotate(70deg);
+            }
+        }
+        /* 动画的状态
+          1。等待状态
+          2。执行状态
+          3。结束状态
+         */
+    </style>
+</head>
+<body>
+<!--
+1.过渡和动画的区别
+  1）过渡必须认为触发才会执行动画，而动画不需要人为触发
+  2）过渡和动画都是给元素添加动画的，都是新增的属性，都需要满足三要素才能出效果
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+</body>
+</html>

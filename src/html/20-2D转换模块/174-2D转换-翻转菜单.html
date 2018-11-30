@@ -21,20 +21,26 @@
             margin-left: 10px;
             line-height: 40px;
             text-align: center;
+            position: relative;
         }
         .second {
             width: 120px;
             padding: 0;
+            transition: opacity 1s;
+
         }
         .second li {
             background-color: pink;
             list-style: none outside none;
             transform: rotateY(180deg);
             transition: all 1s;
+            opacity: 0;
         }
+
         .first li:hover>ul>li{
             /* none表示不旋转，又会正过来 */
             transform: none;
+            opacity: 1;
         }
         .first>li:hover .second li:nth-child(1){
             transition-delay: 0ms;
@@ -66,7 +72,12 @@
         .first>li .second li:nth-child(5) {
             transition-delay: 0ms;
         }
-        /* //todo scale alpha */
+        .box1 {
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            margin: 0 auto;
+        }
 
     </style>
 </head>
@@ -100,5 +111,6 @@
         </ul>
     </li>
 </ul>
+<div class="box1">我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
 </body>
 </html>
