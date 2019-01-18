@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片定位区域属性</title>
+    <link ref="stylesheet" href="../../css/base.css">
+    <style>
+        ul li {
+            list-style: none;
+            float: left;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 20px dashed black;
+            padding: 50px;
+            margin-left: 20px;
+            background: url("../../img/bg_small.jpg") no-repeat;
+        }
+        ul li:nth-child(2) {
+            background-origin: padding-box;
+        }
+        ul li:nth-child(3) {
+            background-origin: border-box;
+        }
+        ul li:nth-child(4) {
+            background-origin: content-box;
+        }
+
+        ol {
+            display: inline-block;
+        }
+        ol li {
+            list-style: none;
+            float: left;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 20px dashed black;
+            padding: 50px;
+            margin-left: 20px;
+            background: url("../../img/bg_small.jpg") no-repeat;
+            background-color: red;
+        }
+        ol li:nth-child(2) {
+            background-clip: padding-box;
+        }
+        ol li:nth-child(3) {
+            background-clip: border-box;
+        }
+        ol li:nth-child(4) {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+<!-- 背景图片从什么区域开始显示，默认从padding内开始显示 -->
+<ul>
+    <li>默认</li>
+    <li>padding</li>
+    <li>border</li>
+    <li>content</li>
+</ul>
+<!-- 背景绘制从什么区域开始显示，默认从border开始绘制 -->
+<ol>
+    <li>默认</li>
+    <li>padding</li>
+    <li>border</li>
+    <li>content</li>
+</ol>
+</body>
+</html>
